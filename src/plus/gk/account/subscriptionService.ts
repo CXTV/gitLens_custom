@@ -939,7 +939,8 @@ export class SubscriptionService implements Disposable {
 			};
 		}
 
-		subscription.state = computeSubscriptionState(subscription);
+		// subscription.state = computeSubscriptionState(subscription);
+		subscription.state =  SubscriptionState.Paid;
 		assertSubscriptionState(subscription);
 
 		const previous = this._subscription as typeof this._subscription | undefined; // Can be undefined here, since we call this in the constructor
